@@ -1,11 +1,6 @@
-console.log("hello world")
+// Make a package that removes spaces from a string and replaces them with dashes
 
-console.log("Hello NPM Package World");
-
-const sayHi = () => {
-    console.log("HIIIIIIIIIIIII!!!");
-}
-
-module.exports = {
-    sayHi
-}
+module.exports = function spaceToDash(string) {
+    if (typeof string !== "string") throw new TypeError("Input not of type string!");
+    return string.replace(/\s/g, "-");
+};
